@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 
 const config = {
   entry: './src/index.js',
@@ -28,10 +28,18 @@ const config = {
           loader: 'babel-loader',
         },
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
 
   mode: 'development',
-};
+}
 
-module.exports = config;
+module.exports = config
